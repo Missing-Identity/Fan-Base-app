@@ -24,11 +24,26 @@ class FanVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICol
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        
+        return DataService.instance.getMovie().count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "TableTitle") as? MovieCell {
+            
+            let movie =  DataService.instance.getMovie()[indexPath.row]
+            
+            cell.updateView(movie: movie)
+            return cell
+            
+        }
+        else {
+            
+            return MovieCell()
+            
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

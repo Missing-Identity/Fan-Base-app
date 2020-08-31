@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="138.5" width="414" height="757.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="160" id="vHB-gA-YMO">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="160" id="vHB-gA-YMO" customClass="MovieCell" customModule="FanBase" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vHB-gA-YMO" id="GUo-3E-OX9">
@@ -43,20 +43,23 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5Pe-GN-2Nm">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5Pe-GN-2Nm" customClass="InfoCell" customModule="FanBase" customModuleProvider="target">
                                                             <rect key="frame" x="84.5" y="0.0" width="245" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BdU-kE-v05">
                                                                 <rect key="frame" x="0.0" y="0.0" width="245" height="128"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Avengers-Endgame-2019-Poster-Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="iU1-fD-n3y">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Endgame" translatesAutoresizingMaskIntoConstraints="NO" id="iU1-fD-n3y">
                                                                         <rect key="frame" x="0.0" y="8" width="237" height="112"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     </imageView>
                                                                 </subviews>
                                                             </collectionViewCellContentView>
                                                             <size key="customSize" width="245" height="128"/>
+                                                            <connections>
+                                                                <outlet property="imageName" destination="iU1-fD-n3y" id="FhZ-F1-8Ow"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
@@ -72,6 +75,9 @@
                                                 <constraint firstItem="y6X-Gt-zHK" firstAttribute="top" secondItem="VrE-uM-cEi" secondAttribute="bottom" constant="5" id="smb-Yk-8fR"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="title" destination="VrE-uM-cEi" id="Ct7-cW-PyW"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -95,6 +101,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="JFd-Au-NpL"/>
+                    <connections>
+                        <outlet property="movieCollection" destination="y6X-Gt-zHK" id="Q6h-ed-c7Z"/>
+                        <outlet property="movieTable" destination="UZs-L9-wbI" id="FCs-5W-Naa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,6 +130,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Avengers-Endgame-2019-Poster-Wallpaper" width="1920" height="1080"/>
+        <image name="Endgame" width="1920" height="1080"/>
     </resources>
 </document>

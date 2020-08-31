@@ -10,7 +10,11 @@ import UIKit
 
 class MovieCell: UITableViewCell {
 
-    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var Viewtitle: UILabel!
     
-    
+    func updateView(movie: TitleSection) {
+        
+        Viewtitle.text = movie.title
+        
+    }
 }

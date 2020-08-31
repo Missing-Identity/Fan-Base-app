@@ -10,6 +10,11 @@ import UIKit
 
 class InfoCell: UICollectionViewCell {
     
-    @IBOutlet weak var movieImage: UIImageView!
+    @IBOutlet weak var ViewimageName: UIImageView!
     
+    func updateView(image: ImageSection) {
+        
+        ViewimageName.image = UIImage(named: image.imageName)
+        
+    }
 }
