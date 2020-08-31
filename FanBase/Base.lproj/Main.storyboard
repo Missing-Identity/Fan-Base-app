@@ -1,24 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3qn-qk-3Pr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--FanVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FanVC" customModule="FanBase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UZs-L9-wbI">
+                                <rect key="frame" x="0.0" y="138.5" width="414" height="757.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="160" id="vHB-gA-YMO">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vHB-gA-YMO" id="GUo-3E-OX9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrE-uM-cEi">
+                                                    <rect key="frame" x="20" y="11" width="374" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="y6X-Gt-zHK">
+                                                    <rect key="frame" x="0.0" y="43.5" width="414" height="116.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aND-wN-iIC">
+                                                        <size key="itemSize" width="245" height="128"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5Pe-GN-2Nm">
+                                                            <rect key="frame" x="84.5" y="0.0" width="245" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BdU-kE-v05">
+                                                                <rect key="frame" x="0.0" y="0.0" width="245" height="128"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Avengers-Endgame-2019-Poster-Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="iU1-fD-n3y">
+                                                                        <rect key="frame" x="0.0" y="8" width="237" height="112"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="245" height="128"/>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VrE-uM-cEi" firstAttribute="trailing" secondItem="GUo-3E-OX9" secondAttribute="trailingMargin" id="1Jy-vJ-cNL"/>
+                                                <constraint firstItem="VrE-uM-cEi" firstAttribute="top" secondItem="GUo-3E-OX9" secondAttribute="topMargin" id="BCB-SR-mga"/>
+                                                <constraint firstItem="y6X-Gt-zHK" firstAttribute="leading" secondItem="GUo-3E-OX9" secondAttribute="leading" id="JUf-NG-J4E"/>
+                                                <constraint firstAttribute="bottom" secondItem="y6X-Gt-zHK" secondAttribute="bottom" id="WAC-Xf-Vx2"/>
+                                                <constraint firstItem="y6X-Gt-zHK" firstAttribute="top" secondItem="VrE-uM-cEi" secondAttribute="bottom" constant="8" id="bsh-VV-kcC"/>
+                                                <constraint firstItem="VrE-uM-cEi" firstAttribute="leading" secondItem="GUo-3E-OX9" secondAttribute="leadingMargin" id="h8c-rJ-B5x"/>
+                                                <constraint firstAttribute="trailing" secondItem="y6X-Gt-zHK" secondAttribute="trailing" id="jKi-G9-JeE"/>
+                                                <constraint firstItem="y6X-Gt-zHK" firstAttribute="top" secondItem="VrE-uM-cEi" secondAttribute="bottom" constant="5" id="smb-Yk-8fR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FanBase List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wa-RP-4EW">
+                                <rect key="frame" x="20" y="98" width="128" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UZs-L9-wbI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Ug-Ct-mD4"/>
+                            <constraint firstItem="6wa-RP-4EW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8CJ-Lh-cpq"/>
+                            <constraint firstItem="UZs-L9-wbI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Oeg-lw-TmK"/>
+                            <constraint firstItem="UZs-L9-wbI" firstAttribute="top" secondItem="6wa-RP-4EW" secondAttribute="bottom" constant="10" id="ZT9-Xy-mM7"/>
+                            <constraint firstItem="6wa-RP-4EW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="gUa-VO-OMo"/>
+                            <constraint firstItem="UZs-L9-wbI" firstAttribute="top" secondItem="6wa-RP-4EW" secondAttribute="bottom" constant="10" id="hp5-iy-jcw"/>
+                            <constraint firstAttribute="bottom" secondItem="UZs-L9-wbI" secondAttribute="bottom" id="lzY-lx-6VF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="JFd-Au-NpL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AgZ-NR-ap0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3qn-qk-3Pr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nEC-b7-2vU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="D9M-Rj-ePH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xjk-kK-bgp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Avengers-Endgame-2019-Poster-Wallpaper" width="1920" height="1080"/>
+    </resources>
 </document>
