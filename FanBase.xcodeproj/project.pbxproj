@@ -56,15 +56,47 @@
 		72018FB624FD106300B0C2A2 /* FanBase */ = {
 			isa = PBXGroup;
 			children = (
+				72018FCE24FD110700B0C2A2 /* Services */,
+				72018FCD24FD110000B0C2A2 /* Model */,
+				72018FCC24FD10FB00B0C2A2 /* View */,
+				72018FCB24FD10F100B0C2A2 /* Controller */,
 				72018FB724FD106300B0C2A2 /* AppDelegate.swift */,
 				72018FB924FD106300B0C2A2 /* SceneDelegate.swift */,
-				72018FBB24FD106300B0C2A2 /* ViewController.swift */,
 				72018FBD24FD106300B0C2A2 /* Main.storyboard */,
 				72018FC024FD106900B0C2A2 /* Assets.xcassets */,
 				72018FC224FD106900B0C2A2 /* LaunchScreen.storyboard */,
 				72018FC524FD106900B0C2A2 /* Info.plist */,
 			);
 			path = FanBase;
+			sourceTree = "<group>";
+		};
+		72018FCB24FD10F100B0C2A2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				72018FBB24FD106300B0C2A2 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72018FCC24FD10FB00B0C2A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72018FCD24FD110000B0C2A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72018FCE24FD110700B0C2A2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
